@@ -3058,6 +3058,8 @@ img{
     background:
     rgba(255,255,255,.04);
 
+    background:red !important;
+    
     border:
     1px solid rgba(255,255,255,.08);
 
