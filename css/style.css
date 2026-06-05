@@ -901,53 +901,6 @@ body{
     letter-spacing:1px;
 }
 
-/* ==========================
-   PORTFOLIO GLOW EFFECT
-========================== */
-
-.portfolio-card{
-
-    position:relative;
-
-    overflow:hidden;
-}
-
-.portfolio-card::after{
-
-    content:"";
-
-    position:absolute;
-
-    width:250px;
-    height:250px;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(110,168,254,.25),
-        transparent 70%
-    );
-
-    left:var(--x);
-    top:var(--y);
-
-    transform:
-    translate(-50%,-50%);
-
-    opacity:0;
-
-    transition:
-    opacity .3s ease;
-
-    pointer-events:none;
-
-    z-index:2;
-}
-
-.portfolio-card:hover::after{
-
-    opacity:1;
-}
 
 /* ==========================================
    WHY US
@@ -2639,7 +2592,13 @@ body::after{
     border-radius:20px;
 }
 
-/* SHINE EFFECT */
+/* ==========================
+   PORTFOLIO SHINE EFFECT
+========================== */
+
+/* ==========================
+   PORTFOLIO SHINE EFFECT
+========================== */
 
 .portfolio-card::after{
 
@@ -2648,36 +2607,32 @@ body::after{
     position:absolute;
 
     top:0;
-    left:-120%;
+    left:-150%;
 
-    width:60%;
+    width:50%;
     height:100%;
 
     background:
     linear-gradient(
         120deg,
         transparent,
-        rgba(255,255,255,.18),
+        rgba(255,255,255,.22),
         transparent
     );
 
-    z-index:3;
+    transform:
+    skewX(-25deg);
 
-    transition:1s;
+    transition:1s ease;
+
+    z-index:3;
 }
 
 .portfolio-card:hover::after{
 
-    left:150%;
+    left:180%;
 }
 
-/* GLOW BORDER */
-
-.portfolio-card:hover{
-
-    border-color:
-    rgba(110,168,254,.35);
-}
 /* ==========================
    LIGHTBOX
 ========================== */

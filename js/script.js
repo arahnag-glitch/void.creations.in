@@ -310,10 +310,6 @@ magneticButtons.forEach(btn=>{
 
 });
 
-alert(
-"Welcome to VOID CREATIONS! Explore our portfolio and let's create something amazing together!"
-);
-
 /* =========================
    PREMIUM GLASS CURSOR
 ========================= */
