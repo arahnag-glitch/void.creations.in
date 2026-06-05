@@ -371,20 +371,13 @@ body{
 
 .hero h1{
 
-    font-size:
-    clamp(
-    3.5rem,
-    7vw,
-    7rem
-    );
-
-    font-weight:900;
+    font-size:clamp(3.8rem,8vw,7rem);
 
     line-height:1;
 
-    letter-spacing:-3px;
+    letter-spacing:-2px;
 
-    margin-bottom:25px;
+    font-weight:900;
 }
 
 .hero h1 span{
@@ -393,14 +386,13 @@ body{
     linear-gradient(
     90deg,
     #ffffff,
-    #6EA8FE
+    #6EA8FE,
+    #8B5CF6
     );
 
-    background-clip:text;
     -webkit-background-clip:text;
 
-    -webkit-text-fill-color:
-    transparent;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero p{
@@ -806,6 +798,8 @@ body{
     transition:
     transform .5s ease,
     box-shadow .5s ease;
+    transform-style:
+    preserve-3d;
 }
 
 /* IMAGE */
@@ -905,7 +899,9 @@ body{
 .portfolio-card:hover{
 
     transform:
-    translateY(-12px);
+    translateY(-12px)
+    rotateX(3deg)
+    rotateY(-3deg);
 
     box-shadow:
     0 25px 70px rgba(0,0,0,.45);
@@ -2299,6 +2295,13 @@ body::after{
 
 .showcase-card img{
 
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+    0 40px 120px rgba(0,0,0,.45),
+    0 0 80px rgba(110,168,254,.12);
+
     width: 100%;
     height: 700px;
 
@@ -3135,143 +3138,158 @@ img{
     }
 }
 
-/* =========================
-   INSTAGRAM CIRCUIT EFFECT
-========================= */
-
-.social-circuit{
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:80px 0;
-}
-
-/* BUTTON */
-
 .instagram-premium{
 
     position:relative;
 
-    z-index:5;
-
-    padding:16px 34px;
-
-    border-radius:18px;
-
-    background:
-    rgba(20,25,45,.85);
-
-    border:
-    1px solid rgba(255,255,255,.08);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-    backdrop-filter:blur(15px);
-
-    transition:.4s ease;
+    overflow:hidden;
 }
 
-.instagram-premium:hover{
+.instagram-premium::before{
 
-    transform:
-    translateY(-3px);
-
-    box-shadow:
-    0 0 20px rgba(255,0,128,.35),
-    0 0 40px rgba(255,120,0,.2);
-}
-
-/* CIRCUIT LINES */
-
-.circuit-line{
+    content:"";
 
     position:absolute;
 
-    background:
-    rgba(255,255,255,.08);
-}
-
-.horizontal{
-
-    width:600px;
-
-    height:1px;
-}
-
-.vertical{
-
-    width:1px;
-
-    height:180px;
-}
-
-/* LIGHT DOT */
-
-.circuit-dot{
-
-    position:absolute;
-
-    width:8px;
-
-    height:8px;
-
-    border-radius:50%;
+    inset:-2px;
 
     background:
     linear-gradient(
-    45deg,
+    90deg,
     #ff00aa,
-    #ff7b00
+    #ff6a00,
+    #ffd500,
+    #ff00aa
     );
 
-    box-shadow:
-    0 0 15px #ff00aa,
-    0 0 25px #ff7b00;
+    background-size:300% 100%;
+
+    z-index:-1;
+
+    filter:blur(18px);
+
+    opacity:.6;
 
     animation:
-    travelLine 5s linear infinite;
+    instaGlow 6s linear infinite;
 }
 
-@keyframes travelLine{
+@keyframes instaGlow{
 
     0%{
-
-        transform:
-        translateX(-300px);
-    }
-
-    50%{
-
-        transform:
-        translateX(300px);
+        background-position:0% 50%;
     }
 
     100%{
+        background-position:300% 50%;
+    }
+}
 
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+    radial-gradient(
+    rgba(255,255,255,.03) 1px,
+    transparent 1px
+    );
+
+    background-size:
+    4px 4px;
+
+    pointer-events:none;
+
+    z-index:-1;
+}
+
+/* =========================
+   CINEMATIC LIGHT ORBS
+========================= */
+
+.luxury-orb{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    opacity:.25;
+
+    pointer-events:none;
+}
+
+.orb-1{
+
+    width:350px;
+    height:350px;
+
+    background:#6EA8FE;
+
+    top:10%;
+    left:-5%;
+
+    animation:
+    orbFloat1 14s ease-in-out infinite;
+}
+
+.orb-2{
+
+    width:280px;
+    height:280px;
+
+    background:#8B5CF6;
+
+    right:-5%;
+    top:20%;
+
+    animation:
+    orbFloat2 18s ease-in-out infinite;
+}
+
+.orb-3{
+
+    width:220px;
+    height:220px;
+
+    background:#00D4FF;
+
+    bottom:10%;
+    left:40%;
+
+    animation:
+    orbFloat3 16s ease-in-out infinite;
+}
+
+@keyframes orbFloat1{
+
+    50%{
         transform:
-        translateX(-300px);
+        translateY(-40px)
+        translateX(30px);
     }
 }
 
-@media(max-width:768px){
+@keyframes orbFloat2{
 
-    .horizontal{
-
-        width:280px;
-    }
-
-    .vertical{
-
-        height:120px;
+    50%{
+        transform:
+        translateY(30px)
+        translateX(-40px);
     }
 }
+
+@keyframes orbFloat3{
+
+    50%{
+        transform:
+        translateY(-25px)
+        scale(1.1);
+    }
+}
+
