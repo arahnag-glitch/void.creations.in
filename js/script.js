@@ -460,3 +460,21 @@ document.querySelectorAll("img")
 
 });
 
+const light1 =
+document.querySelector(".light-1");
+
+document.addEventListener(
+"mousemove",
+(e)=>{
+
+if(light1){
+
+light1.style.transform =
+`translate(
+${e.clientX/30}px,
+${e.clientY/30}px
+)`;
+
+}
+
+});
