@@ -3058,8 +3058,6 @@ img{
     background:
     rgba(255,255,255,.04);
 
-    background:red !important;
-    
     border:
     1px solid rgba(255,255,255,.08);
 
@@ -3091,3 +3089,189 @@ img{
     color:#6EA8FE;
 }
 
+.btn-primary{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.btn-primary::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:inherit;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #6EA8FE,
+        #8a63ff,
+        #6EA8FE,
+        transparent
+    );
+
+    background-size:300% 100%;
+
+    animation:
+    borderFlow 4s linear infinite;
+
+    z-index:-1;
+}
+
+@keyframes borderFlow{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    100%{
+        background-position:300% 50%;
+    }
+}
+
+/* =========================
+   INSTAGRAM CIRCUIT EFFECT
+========================= */
+
+.social-circuit{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 0;
+}
+
+/* BUTTON */
+
+.instagram-premium{
+
+    position:relative;
+
+    z-index:5;
+
+    padding:16px 34px;
+
+    border-radius:18px;
+
+    background:
+    rgba(20,25,45,.85);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s ease;
+}
+
+.instagram-premium:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 0 20px rgba(255,0,128,.35),
+    0 0 40px rgba(255,120,0,.2);
+}
+
+/* CIRCUIT LINES */
+
+.circuit-line{
+
+    position:absolute;
+
+    background:
+    rgba(255,255,255,.08);
+}
+
+.horizontal{
+
+    width:600px;
+
+    height:1px;
+}
+
+.vertical{
+
+    width:1px;
+
+    height:180px;
+}
+
+/* LIGHT DOT */
+
+.circuit-dot{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+    45deg,
+    #ff00aa,
+    #ff7b00
+    );
+
+    box-shadow:
+    0 0 15px #ff00aa,
+    0 0 25px #ff7b00;
+
+    animation:
+    travelLine 5s linear infinite;
+}
+
+@keyframes travelLine{
+
+    0%{
+
+        transform:
+        translateX(-300px);
+    }
+
+    50%{
+
+        transform:
+        translateX(300px);
+    }
+
+    100%{
+
+        transform:
+        translateX(-300px);
+    }
+}
+
+@media(max-width:768px){
+
+    .horizontal{
+
+        width:280px;
+    }
+
+    .vertical{
+
+        height:120px;
+    }
+}
