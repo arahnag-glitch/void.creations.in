@@ -468,11 +468,13 @@ body{
 
     width:100%;
 
-    max-width:420px;
+    max-width:520px;
 
-    height:520px;
+    height:580px;
 
     margin:auto;
+
+    perspective:1200px;
 }
 
 .showcase-card{
@@ -496,10 +498,13 @@ body{
 
     transform:
     translateY(0)
-    scale(1);
+    scale(1)
+    rotateY(-4deg);
 
     animation:
     cardFloat 6s ease-in-out infinite;
+
+    z-index:3;
 }
 
 @keyframes cardFloat{
@@ -532,6 +537,86 @@ body{
     box-shadow:
     0 40px 120px rgba(0,0,0,.45),
     0 0 60px rgba(110,168,254,.12);
+    transition:
+    transform .8s ease,
+    filter .8s ease;
+
+}
+
+/* BACK DEPTH CARD */
+
+.hero-showcase::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90%;
+
+    height:90%;
+
+    top:30px;
+
+    left:-30px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.03);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+
+    backdrop-filter:
+    blur(10px);
+
+    transform:
+    rotate(-8deg);
+
+    z-index:0;
+}
+
+/* FRONT DEPTH CARD */
+
+.hero-showcase::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:90%;
+
+    height:90%;
+
+    top:40px;
+
+    right:-30px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.03);
+
+    border:
+    1px solid rgba(255,255,255,.05);
+
+    transform:
+    rotate(8deg);
+
+    z-index:0;
+}
+
+/* =========================
+   SHOWCASE PREMIUM HOVER
+========================= */
+
+.hero-showcase:hover .showcase-card.active img{
+
+    transform:
+    scale(1.05);
+
+    filter:
+    brightness(1.05);
 }
 
 /* ==========================================
