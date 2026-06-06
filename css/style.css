@@ -117,17 +117,15 @@ body{
    LOADER
 ========================================== */
 
+/* =========================
+   VOID LUXURY LOADER
+========================= */
+
 #loader{
 
     position:fixed;
 
     inset:0;
-
-    width:100vw;
-
-    height:100vh;
-
-    overflow:hidden;
 
     background:#050816;
 
@@ -140,30 +138,180 @@ body{
     z-index:999999;
 }
 
+.loader-container{
+
+    position:relative;
+
+    width:320px;
+
+    height:180px;
+}
+
+/* DIAMOND */
+
+.loader-diamond{
+
+    position:absolute;
+
+    top:25px;
+
+    left:0;
+
+    width:14px;
+    height:14px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #6EA8FE,
+    #8B5CF6
+    );
+
+    transform:
+    rotate(45deg);
+
+    border-radius:2px;
+
+    box-shadow:
+    0 0 15px rgba(110,168,254,.7),
+    0 0 30px rgba(139,92,246,.5);
+
+    animation:
+    diamondTravel 1.8s ease forwards;
+}
+
+/* DRAWN LINE */
+
+.loader-path{
+
+    position:absolute;
+
+    top:31px;
+
+    left:7px;
+
+    height:2px;
+
+    width:0;
+
+    background:
+    linear-gradient(
+    90deg,
+    #6EA8FE,
+    #8B5CF6
+    );
+
+    box-shadow:
+    0 0 10px rgba(110,168,254,.5);
+
+    animation:
+    pathDraw 1.8s ease forwards;
+}
+
+/* LOGO */
+
 .loader-logo{
 
-    font-size:2rem;
+    position:absolute;
 
-    font-weight:800;
+    top:80px;
 
-    letter-spacing:8px;
+    left:50%;
+
+    transform:
+    translateX(-50%)
+    translateY(20px);
+
+    text-align:center;
+
+    opacity:0;
 
     color:white;
 
+    font-size:2.8rem;
+
+    font-weight:900;
+
+    letter-spacing:10px;
+
     animation:
-    pulse 2s infinite;
+    logoReveal .8s ease forwards;
+
+    animation-delay:1.6s;
 }
 
-@keyframes pulse{
+.loader-logo span{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-size:.75rem;
+
+    letter-spacing:8px;
+
+    color:#6EA8FE;
+}
+
+/* ANIMATIONS */
+
+@keyframes pathDraw{
+
+    from{
+
+        width:0;
+    }
+
+    to{
+
+        width:280px;
+    }
+}
+
+@keyframes diamondTravel{
+
+    from{
+
+        left:0;
+    }
+
+    to{
+
+        left:280px;
+    }
+}
+
+@keyframes logoReveal{
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(-50%)
+        translateY(0);
+    }
+}
+
+.loader-diamond{
+
+    animation:
+    diamondTravel 1.8s ease forwards,
+    diamondPulse 1.2s ease infinite 1.8s;
+}
+
+@keyframes diamondPulse{
 
     0%,100%{
 
-        opacity:.4;
+        box-shadow:
+        0 0 15px rgba(110,168,254,.6);
     }
 
     50%{
 
-        opacity:1;
+        box-shadow:
+        0 0 40px rgba(139,92,246,.9);
     }
 }
 
@@ -3673,4 +3821,48 @@ body::before{
 
     box-shadow:
     0 0 20px rgba(110,168,254,.7);
+}
+
+.loader-line{
+
+    position:relative;
+}
+
+.loader-line::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#8B5CF6;
+
+    box-shadow:
+    0 0 20px #8B5CF6,
+    0 0 40px #6EA8FE;
+
+    top:50%;
+
+    transform:
+    translateY(-50%);
+
+    animation:
+    travelline 1.8s linear infinite;
+}
+
+@keyframes travelline{
+
+    from{
+
+        left:0;
+    }
+
+    to{
+
+        left:100%;
+    }
 }
