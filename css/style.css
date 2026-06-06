@@ -3472,7 +3472,7 @@ body::before{
 
 .mouse-glow{
 
-    position:absolute;
+    position:fixed;
 
     width:500px;
     height:500px;
@@ -3482,16 +3482,110 @@ body::before{
     background:
     radial-gradient(
     circle,
-    rgba(110,168,254,.18),
-    transparent 70%
+    rgba(110,168,254,.18) 0%,
+    rgba(139,92,246,.10) 40%,
+    transparent 75%
     );
 
-    filter:blur(50px);
+    filter:blur(60px);
 
     pointer-events:none;
+
+    transform:translate(-50%,-50%);
+
+    z-index: index 0;
+}
+
+/* =========================
+   CONTENT ABOVE GLOW
+========================= */
+
+.hero,
+.services,
+.portfolio,
+.process,
+.contact{
+
+    position:relative;
+
+    z-index:2;
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.reveal{
+
+    opacity:0;
+
+    transform:
+    translateY(80px);
+
+    filter:
+    blur(10px);
+
+    transition:
+    opacity .9s ease,
+    transform .9s ease,
+    filter .9s ease;
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+
+    filter:
+    blur(0);
+}
+
+/* =========================
+   LUXURY DIVIDER
+========================= */
+
+.section-divider{
+
+    width:80%;
+
+    height:1px;
+
+    margin:100px auto;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    rgba(110,168,254,.35),
+    rgba(255,255,255,.15),
+    rgba(110,168,254,.35),
+    transparent
+    );
+
+    position:relative;
+}
+
+.section-divider::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:#6EA8FE;
 
     transform:
     translate(-50%,-50%);
 
-    z-index:0;
+    box-shadow:
+    0 0 20px rgba(110,168,254,.7);
 }
