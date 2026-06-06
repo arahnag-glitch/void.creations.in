@@ -478,3 +478,19 @@ ${e.clientY/30}px
 }
 
 });
+
+const hero = document.querySelector(".hero");
+const glow = document.querySelector(".mouse-glow");
+
+hero.addEventListener("mousemove",(e)=>{
+
+    const rect = hero.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    glow.style.left = `${x}px`;
+    glow.style.top = `${y}px`;
+
+});
+
