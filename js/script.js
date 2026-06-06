@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
             loader.style.opacity = "0";
             loader.style.visibility = "hidden";
 
-        },1200);
+        },4000);
 
     }
 
