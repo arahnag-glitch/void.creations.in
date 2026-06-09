@@ -884,7 +884,7 @@ body{
 ========================================== */
 
 .services{
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .services-grid{
@@ -987,7 +987,7 @@ body{
 ========================================== */
 
 .portfolio{
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .portfolio-grid{
@@ -1201,7 +1201,7 @@ body{
 ========================================== */
 
 .why-us{
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .features-grid{
@@ -1254,7 +1254,7 @@ body{
 ========================================== */
 
 .process{
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .timeline{
@@ -1378,7 +1378,7 @@ body{
 ========================================== */
 
 .testimonials{
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .testimonial-slider{
@@ -1447,7 +1447,7 @@ body{
 ========================================== */
 
 .instagram{
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .instagram-grid{
@@ -1497,7 +1497,7 @@ body{
 ========================================== */
 
 .contact{
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .contact-form{
@@ -1648,14 +1648,14 @@ body{
 
 footer{
 
-    padding:80px 7%;
+    padding:40px 7%;
 
     text-align:center;
 
     border-top:
     1px solid rgba(255,255,255,.06);
 
-    margin-top:80px;
+    margin-top:40px;
 }
 
 .footer-logo{
@@ -2109,7 +2109,7 @@ body::after{
 
 .before-after{
 
-    padding:120px 7%;
+    padding:60px 7%;
 }
 
 .comparison{
@@ -3785,7 +3785,7 @@ body::before{
 
     height:1px;
 
-    margin:100px auto;
+    margin:60px auto;
 
     background:
     linear-gradient(
