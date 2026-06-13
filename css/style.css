@@ -8,35 +8,34 @@
 
 :root {
 
-    /* Brand Colors */
+    /* Luxury Colors */
 
-    --primary: #0F1835;
-    --secondary: #16244D;
+    --primary: #050505;
+    --secondary: #0D0D0D;
 
-    --accent: #6EA8FE;
-    --accent-light: #8FC5FF;
+    --accent: #C9A96E;
+    --accent-light: #D8BC8A;
 
-    --neon: #4CC9F0;
+    --neon: #C9A96E;
 
     --white: #FFFFFF;
-    --text: #F5F7FA;
-    --muted: #AAB3D1;
+    --text: #F5F5F5;
+    --muted: #A0A0A0;
 
     /* Glass */
 
-    --glass: rgba(255,255,255,0.05);
+    --glass: rgba(255,255,255,0.03);
     --glass-border: rgba(255,255,255,0.08);
 
     /* Effects */
 
     --shadow:
-    0 10px 30px rgba(0,0,0,.30);
+    0 10px 30px rgba(0,0,0,.45);
 
     --glow:
-    0 0 20px rgba(76,201,240,.35);
+    0 0 20px rgba(201,169,110,.25);
 
     --radius: 24px;
-
 }
 
 /* ---------- Reset ---------- */
@@ -55,16 +54,7 @@ body{
 
     font-family:'Inter',sans-serif;
 
-    background:
-    radial-gradient(
-    circle at top right,
-    rgba(76,201,240,.08),
-    transparent 30%),
-
-    radial-gradient(
-    circle at bottom left,
-    rgba(110,168,254,.08),
-    transparent 30%),
+    background:#050505;
 
     var(--primary);
 
@@ -1548,7 +1538,7 @@ body{
     rgba(76,201,240,.45);
 
     box-shadow:
-    0 0 20px rgba(76,201,240,.15);
+    0 0 20px rgba(255,255,255,.05);
 }
 
 .contact-form textarea{
@@ -2246,7 +2236,7 @@ body::before{
     background:
     radial-gradient(
         circle,
-        rgba(110,168,254,.18),
+        rgba(201,169,110,.12),
         transparent 70%
     );
 
@@ -2275,7 +2265,7 @@ body::after{
     background:
     radial-gradient(
         circle,
-        rgba(76,201,240,.15),
+        rgba(201,169,110,.12),
         transparent 70%
     );
 
@@ -2339,7 +2329,7 @@ body::after{
     width:300px;
     height:300px;
 
-    background:#6EA8FE;
+    background:#C9A96E;
 
     top:10%;
     left:5%;
@@ -2353,7 +2343,7 @@ body::after{
     width:220px;
     height:220px;
 
-    background:#4CC9F0;
+    background:#C9A96E;
 
     top:20%;
     right:10%;
@@ -2367,7 +2357,7 @@ body::after{
     width:180px;
     height:180px;
 
-    background:#8FC5FF;
+    background:#C9A96E;
 
     bottom:10%;
     left:45%;
@@ -2412,7 +2402,7 @@ body::after{
     rotate(8deg);
 
     text-shadow:
-    0 0 20px #6EA8FE;
+    0 0 20px #C9A96E;
 }
 
 
@@ -2500,8 +2490,8 @@ body::after{
     background: linear-gradient(
         90deg,
         #ffffff,
-        #7ac7ff,
-        #1fb6ff
+        #C9A96E,
+        #C9A96E
     );
 
     -webkit-background-clip: text;
@@ -2619,7 +2609,7 @@ body::after{
 
     margin-bottom: 10px;
 
-    color: #7ac7ff;
+    color: #C9A96E;
 
     font-size: .9rem;
 
@@ -2652,7 +2642,7 @@ body::after{
     background:
     radial-gradient(
     circle,
-    rgba(31,182,255,.18),
+    rgba(201,169,110,.12),
     transparent 70%
     );
 
@@ -2676,7 +2666,7 @@ body::after{
     background:
     radial-gradient(
     circle,
-    rgba(255,255,255,.08),
+    rgba(201,169,110,.08),
     transparent 70%
     );
 
@@ -2860,7 +2850,7 @@ body::after{
     linear-gradient(
     90deg,
     transparent,
-    rgba(110,168,254,.8),
+    rgba(201,169,110,.8),
     transparent
     );
 }
@@ -2925,7 +2915,7 @@ body::after{
     linear-gradient(
         120deg,
         transparent,
-        rgba(255,255,255,.22),
+        rgba(201,169,110,.22),
         transparent
     );
 
