@@ -54,9 +54,7 @@ body{
 
     font-family:'Inter',sans-serif;
 
-    background:#050505;
-
-    var(--primary);
+    background:var(--primary);
 
     color:var(--text);
 
@@ -856,6 +854,7 @@ body{
 
 .section-header h2{
 
+    font-family:'Playfair Display',serif;
     margin-top:15px;
 
     font-size:
@@ -1804,54 +1803,6 @@ footer p{
 }
 
 /* ==========================================
-   ULTRA PREMIUM BACKGROUND GLOW
-========================================== */
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    top:-200px;
-    right:-200px;
-
-    width:500px;
-    height:500px;
-
-    background:
-    radial-gradient(
-    circle,
-    rgba(76,201,240,.10),
-    transparent 70%
-    );
-
-    z-index:-1;
-}
-
-body::after{
-
-    content:"";
-
-    position:fixed;
-
-    bottom:-250px;
-    left:-250px;
-
-    width:550px;
-    height:550px;
-
-    background:
-    radial-gradient(
-    circle,
-    rgba(110,168,254,.08),
-    transparent 70%
-    );
-
-    z-index:-1;
-}
-
-/* ==========================================
    MOBILE MENU
 ========================================== */
 
@@ -2212,7 +2163,8 @@ body{
 
 body{
 
-    background:#0F1835;
+    background:#050505;
+
 
     position:relative;
 }
@@ -2471,13 +2423,15 @@ body::after{
 
     font-size: clamp(3.5rem,8vw,7rem);
 
+    font-family:'Playfair Display',serif;
+
     line-height: .95;
 
-    font-weight: 900;
+    font-weight: 700;
 
     margin-bottom: 30px;
 
-    letter-spacing:-3px;
+    letter-spacing: -2px;
 
     text-shadow:
     0 10px 40px rgba(0,0,0,.35);
