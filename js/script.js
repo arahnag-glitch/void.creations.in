@@ -517,3 +517,22 @@ reveals.forEach(section=>{
     revealObserver.observe(section);
 
 });
+
+const heroCard =
+document.querySelector(".showcase-card.active");
+
+document.addEventListener("mousemove",(e)=>{
+
+    if(!heroCard) return;
+
+    const x =
+    (window.innerWidth/2 - e.clientX)/40;
+
+    const y =
+    (window.innerHeight/2 - e.clientY)/40;
+
+    heroCard.style.transform =
+    `rotateY(${x}deg)
+     rotateX(${-y}deg)`;
+
+});

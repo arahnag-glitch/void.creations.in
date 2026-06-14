@@ -924,22 +924,21 @@ body{
 
     position:absolute;
 
-    top:-50%;
-    left:-50%;
-
-    width:200%;
-    height:200%;
+    inset:0;
 
     background:
-    radial-gradient(
-    circle,
-    rgba(76,201,240,.08),
-    transparent 60%
+
+    linear-gradient(
+    135deg,
+    rgba(201,169,110,.08),
+    transparent 50%
     );
 
     opacity:0;
 
-    transition:.5s;
+    transition:.4s;
+
+    pointer-events:none;
 }
 
 .service-card:hover::before{
@@ -962,7 +961,7 @@ body{
 
     font-size:2rem;
 
-    color:var(--accent);
+    color:#C9A96E;
 
     margin-bottom:20px;
 }
@@ -1757,7 +1756,7 @@ footer p{
     .btn-primary,
     .btn-secondary{
         transition:
-        all .35s ease;
+        transform .35s ease;
         width:100%;
     }
 
@@ -1905,12 +1904,13 @@ footer p{
     top:0;
     left:0;
 
-    transition:.6s ease;
+    transition:
+    transform .8s ease;
 }
 
 .portfolio-card:hover img{
 
-    transform:scale(1.1);
+    transform:scale(1.08);
 }
 
 @keyframes trailFade{
@@ -3048,9 +3048,8 @@ body{
 
 section{
 
-    transition:
-    transform .6s ease,
-    opacity .6s ease;
+    animation:
+    fadeUp 1s ease;
 }
 
 /* ==========================
@@ -3663,17 +3662,16 @@ body::before{
 
     position:fixed;
 
-    width:500px;
-    height:500px;
+    width:700px;
+    height:700px;
 
     border-radius:50%;
 
     background:
     radial-gradient(
     circle,
-    rgba(110,168,254,.18) 0%,
-    rgba(139,92,246,.10) 40%,
-    transparent 75%
+    rgba(201,169,110,.08),
+    transparent 70%
     );
 
     filter:blur(60px);
@@ -3820,5 +3818,26 @@ body::before{
     to{
 
         left:100%;
+    }
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
     }
 }
