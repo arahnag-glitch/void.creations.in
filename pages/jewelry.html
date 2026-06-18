@@ -21,6 +21,9 @@ rel="stylesheet">
 <link rel="stylesheet"
 href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
 </head>
 
 <body class="gallery-page">
@@ -48,41 +51,76 @@ Premium Jewelry Advertising Collection
 
 <div class="gallery-item">
 
+<a
+href="../assets/gallery/jewelry/jewelry1.png"
+class="glightbox"
+data-gallery="jewelry">
+
 <img
 src="../assets/gallery/jewelry/jewelry1.png"
 alt="Jewelry Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
+
+<a
+href="../assets/gallery/jewelry/jewelry2.png"
+class="glightbox"
+data-gallery="jewelry">
 
 <img
 src="../assets/gallery/jewelry/jewelry2.png"
 alt="Jewelry Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
+
+<a
+href="../assets/gallery/jewelry/jewelry3.png"
+class="glightbox"
+data-gallery="jewelry">
 
 <img
 src="../assets/gallery/jewelry/jewelry3.png"
 alt="Jewelry Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
+
+<a
+href="../assets/gallery/jewelry/jewelry4.png"
+class="glightbox"
+data-gallery="jewelry">
 
 <img
 src="../assets/gallery/jewelry/jewelry4.png"
 alt="Jewelry Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
 
+<a
+href="../assets/gallery/jewelry/jewelry5.png"
+class="glightbox"
+data-gallery="jewelry">
+
 <img
 src="../assets/gallery/jewelry/jewelry5.png"
 alt="Jewelry Ad">
+
+</a>
 
 </div>
 
@@ -90,20 +128,15 @@ alt="Jewelry Ad">
 
 <!-- LIGHTBOX -->
 
-<div id="lightbox">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-    <span id="close-lightbox">
-        ×
-    </span>
+<script>
 
-    <img
-    id="lightbox-img"
-    src=""
-    alt="">
+const lightbox = GLightbox({
+    selector: '.glightbox'
+});
 
-</div>
-
-<script src="../js/gallery.js"></script>
+</script>
 
 </body>
 </html>

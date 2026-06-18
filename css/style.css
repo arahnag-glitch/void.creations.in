@@ -3841,3 +3841,9 @@ body::before{
 
     }
 }
+
+.gslide-image img{
+
+    border-radius:20px;
+
+}
