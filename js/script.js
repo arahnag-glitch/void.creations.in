@@ -474,12 +474,31 @@ ${e.clientY/30}px
 
 const glow = document.querySelector(".mouse-glow");
 
-document.addEventListener("mousemove",(e)=>{
+let mouseX = 0;
+let mouseY = 0;
 
-    glow.style.left = `${e.clientX}px`;
-    glow.style.top = `${e.clientY}px`;
+let currentX = 0;
+let currentY = 0;
+
+document.addEventListener("mousemove", (e) => {
+
+    mouseX = e.clientX;
+    mouseY = e.clientY;
 
 });
+
+function animateGlow(){
+
+    currentX += (mouseX - currentX) * 0.08;
+    currentY += (mouseY - currentY) * 0.08;
+
+    glow.style.left = currentX + "px";
+    glow.style.top = currentY + "px";
+
+    requestAnimationFrame(animateGlow);
+}
+
+animateGlow();
 
 const reveals = document.querySelectorAll(".reveal");
 

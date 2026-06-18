@@ -3669,18 +3669,18 @@ body::before{
 
     background:
     radial-gradient(
-    circle,
-    rgba(201,169,110,.08),
-    transparent 70%
+        circle,
+        rgba(201,169,110,.08),
+        transparent 70%
     );
 
-    filter:blur(60px);
+    filter:blur(80px);
 
     pointer-events:none;
 
     transform:translate(-50%,-50%);
 
-    z-index: index 0;
+    z-index:0;
 }
 
 /* =========================
@@ -3691,12 +3691,13 @@ body::before{
 .services,
 .portfolio,
 .process,
-.contact{
+.contact
+    footer{
 
     position:relative;
 
     z-index:2;
-}
+    }
 
 /* =========================
    SCROLL REVEAL
