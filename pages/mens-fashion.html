@@ -21,6 +21,9 @@ rel="stylesheet">
 <link rel="stylesheet"
 href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
 </head>
 
 <body class="gallery-page">
@@ -48,23 +51,73 @@ Premium Mens Fashion Advertising Collection
 
 <div class="gallery-item">
 
+<a
+href="../assets/gallery/mens-fashion/mens-fashion1.png"
+class="glightbox"
+data-gallery="mens-fashion">
+
 <img
 src="../assets/gallery/mens-fashion/mens-fashion1.png"
 alt="Mens Fashion Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
+
+<a
+href="../assets/gallery/mens-fashion/mens-fashion2.png"
+class="glightbox"
+data-gallery="mens-fashion">
 
 <img
 src="../assets/gallery/mens-fashion/mens-fashion2.png"
 alt="Mens Fashion Ad">
 
+</a>
 </div>
 
 <div class="gallery-item">
 
+<a
+href="../assets/gallery/mens-fashion/mens-fashion3.png"
+class="glightbox"
+data-gallery="mens-fashion">
+
 <img
+src="../assets/gallery/mens-fashion/mens-fashion3.png"
+alt="Mens Fashion Ad">
+
+</a>
+</div>
+
+<div class="gallery-item">
+
+<a
+href="../assets/gallery/mens-fashion/mens-fashion4.png"
+class="glightbox"
+data-gallery="mens-fashion">
+
+<img
+src="../assets/gallery/mens-fashion/mens-fashion4.png"
+alt="Mens Fashion Ad">
+</a>
+</div>
+
+<div class="gallery-item">
+
+<a
+href="../assets/gallery/mens-fashion/mens-fashion5.png"
+class="glightbox"
+data-gallery="mens-fashion">
+
+<img
+src="../assets/gallery/mens-fashion/mens-fashion5.png"
+alt="Mens Fashion Ad">
+</a>
+</div>
+
 src="../assets/gallery/mens-fashion/mens-fashion3.png"
 alt="Mens Fashion Ad">
 
@@ -90,20 +143,13 @@ alt="Mens Fashion Ad">
 
 <!-- LIGHTBOX -->
 
-<div id="lightbox">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-    <span id="close-lightbox">
-        ×
-    </span>
-
-    <img
-    id="lightbox-img"
-    src=""
-    alt="">
-
-</div>
-
-<script src="../js/gallery.js"></script>
+<script>
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+</script>
 
 </body>
 </html>

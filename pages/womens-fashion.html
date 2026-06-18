@@ -21,6 +21,9 @@ rel="stylesheet">
 <link rel="stylesheet"
 href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
 </head>
 
 <body class="gallery-page">
@@ -48,41 +51,76 @@ Premium Womens Fashion Advertising Collection
 
 <div class="gallery-item">
 
+<a
+href="../assets/gallery/womens-fashion/womens-fashion1.png"
+class="glightbox"
+data-gallery="womens-fashion">
+
 <img
 src="../assets/gallery/womens-fashion/womens-fashion1.png"
 alt="Womens Fashion Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
+
+<a
+href="../assets/gallery/womens-fashion/womens-fashion2.png"
+class="glightbox"
+data-gallery="womens-fashion">
 
 <img
 src="../assets/gallery/womens-fashion/womens-fashion2.png"
 alt="Womens Fashion Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
+
+<a
+href="../assets/gallery/womens-fashion/womens-fashion3.png"
+class="glightbox"
+data-gallery="womens-fashion">
 
 <img
 src="../assets/gallery/womens-fashion/womens-fashion3.png"
 alt="Womens Fashion Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
+
+<a
+href="../assets/gallery/womens-fashion/womens-fashion4.png"
+class="glightbox"
+data-gallery="womens-fashion">
 
 <img
 src="../assets/gallery/womens-fashion/womens-fashion4.png"
 alt="Womens Fashion Ad">
 
+</a>
+
 </div>
 
 <div class="gallery-item">
 
+<a
+href="../assets/gallery/womens-fashion/womens-fashion5.png"
+class="glightbox"
+data-gallery="womens-fashion">
+
 <img
 src="../assets/gallery/womens-fashion/womens-fashion5.png"
 alt="Womens Fashion Ad">
+
+</a>
 
 </div>
 
@@ -90,20 +128,13 @@ alt="Womens Fashion Ad">
 
 <!-- LIGHTBOX -->
 
-<div id="lightbox">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
-    <span id="close-lightbox">
-        ×
-    </span>
-
-    <img
-    id="lightbox-img"
-    src=""
-    alt="">
-
-</div>
-
-<script src="../js/gallery.js"></script>
+<script>
+    const lightbox = GLightbox({
+        selector: '.glightbox'
+    });
+</script>
 
 </body>
 </html>
